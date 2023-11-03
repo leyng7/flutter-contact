@@ -11,15 +11,37 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(centerTitle: false, title: Text('앱임')),
+        appBar: AppBar(
+          centerTitle: false,
+          title: Text('금호동3가'),
+          actions: const [Icon(Icons.search)],
+        ),
         body: SizedBox(
-          child: Text(
-            '안녕하세요',
-            style: TextStyle(
-              color: Color(0xff241d1d),
-              fontSize: 40,
-              fontWeight: FontWeight.w700,
-            ),
+          height: 150,
+          child: Row(
+            children: [
+              Image.asset("assets/dog.png", width: 150),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('카메라 팝니다'),
+                    Text('금호동 3가'),
+                    Text('7000원'),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: const [
+                          Icon(Icons.favorite),
+                          Text('4'),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),
