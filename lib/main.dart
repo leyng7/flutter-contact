@@ -12,7 +12,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(centerTitle: false, title: Text('앱임')),
-            body: Text('안녕'),
+            body: Align(
+              alignment: Alignment.bottomRight,
+              child: Container(
+                width: double.infinity,
+                height: 50,
+                // margin: EdgeInsets.all(20),
+                child: Text("TEST"),
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  border: Border.all(color: Colors.black)
+                ),
+              ),
+            ),
             bottomNavigationBar: BottomAppBar(
                 child: Container(
                     height: 60,
