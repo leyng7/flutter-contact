@@ -11,43 +11,45 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          centerTitle: false,
-          title: Text('금호동3가'),
-          actions: const [Icon(Icons.search)],
-        ),
-        body: SizedBox(
-          height: 150,
-          child: Row(
-            children: [
-              Image.asset("assets/dog.png", width: 150),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '카메라 팝니다',
-                      style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
-                    ),
-                    Text('금호동 3가'),
-                    Text('7000원'),
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: const [
-                          Icon(Icons.favorite),
-                          Text('4'),
-                        ],
-                      ),
-                    ),
-                  ],
+        appBar: AppBar(),
+        body: ListView(
+          children: [
+            Row(
+              children: [
+                Image.asset(
+                  "assets/dog.png",
+                  width: 100,
                 ),
-              ),
-            ],
-          ),
+                Expanded(
+                    child: Text('홍길동'),
+                )
+              ],
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  "assets/dog.png",
+                  width: 100,
+                ),
+                Expanded(
+                  child: Text('홍길동'),
+                )
+              ],
+            ),
+          ],
         ),
       ),
+    );
+  }
+}
+
+class ShopItem extends StatelessWidget {
+  const ShopItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      child: Text('안녕!'),
     );
   }
 }
