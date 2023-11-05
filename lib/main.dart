@@ -25,7 +25,10 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('카메라 팝니다'),
+                    Text(
+                      '카메라 팝니다',
+                      style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                    ),
                     Text('금호동 3가'),
                     Text('7000원'),
                     Container(
